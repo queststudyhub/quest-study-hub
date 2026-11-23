@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUEST Study Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>QUEST Study Hub</h1>
+        <p>Your University Learning Partner</p>
+    </header>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#materials">Study Material</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Welcome Section -->
+    <section class="hero" id="home">
+
+    <p class="hero-tag">QUEST UNIVERSITY STUDENTS</p>
+
+    <h2>Your Learning Starts Here</h2>
+
+    <p>
+        Find Notes, Past Papers and Study Materials
+        for your university exams.
+    </p>
+
+    <div class="search-box">
+    <input type="text" id="searchInput"
+    placeholder="Search Notes, Papers, Notifications...">
+
+    <button type="button" onclick="searchMaterials()">Search</button>
+</div>
+
+<div id="searchResults"></div>
+
+    <a href="#materials" class="btn">Explore Study Material</a>
+
+</section>
+
+    <!-- Study Material -->
+    <section class="materials" id="materials">
+    <h2>Our Study Materials</h2>
+    <p class="subtitle">Everything you need for your studies</p>
+
+    <div class="cards" id="homeCards">
+
+        <div class="card">
+            <h3>📚 Notes</h3>
+            <p>Find subject-wise university notes.</p>
+           <a href="notes.html">Explore Notes</a>
+        </div>
+
+        <div class="card">
+            <h3>📝 Past Papers</h3>
+            <p>Prepare with previous exam papers.</p>
+            <a href="past-papers.html">View Papers</a>
+        </div>
+
+        <div class="card">
+            <h3>🔔 Notifications</h3>
+            <p>Get the latest university announcements and updates.</p>
+            <a href="notifications.html">View Notifications</a>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- About -->
+    <section class="about" id="about">
+        <h2>About QUEST Study Hub</h2>
+        <p>A learning platform created to help QUEST University students access study materials easily.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <h3>QUEST Study Hub</h3>
+        <p>Your University Learning Partner</p>
+        <p>Made by MUHAMMAD ARSLAN</p>
+        <p>© 2026 QUEST Study Hub. All Rights Reserved.</p>
+    </footer>
+
+<script>
+function searchMaterials() {
+
+    let input = document.getElementById("searchInput").value.toLowerCase().trim();
+    let results = document.getElementById("searchResults");
+    let homeCards = document.getElementById("homeCards");
+
+    results.innerHTML = "";
+
+    if (input === "") {
+        homeCards.style.display = "";
+        return;
+    }
+
+    homeCards.style.display = "none";
+
+    let materials = [
+        {
+            name: "25BAE",
+            description: "Building and Architectural Engineering Past Papers",
+            link: "bae-papers.html"
+        },
+        {
+            name: "25Physics",
+            description: "Physics Past Papers",
+            link: "past-papers.html"
+        },
+        {
+            name: "Notes",
+            description: "Subject wise university notes",
+            link: "notes.html"
+        },
+        {
+            name: "Notifications",
+            description: "University announcements and updates",
+            link: "notifications.html"
+        },
+        { name: "Linear Algebra", description: "Mathematics notes", link: "notes.html" },
+        { name: "Statistics & Probability", description: "Statistics notes", link: "notes.html" },
+        { name: "Fine Arts", description: "Fine Arts notes", link: "notes.html" },
+        { name: "Engineering Mechanics", description: "Mechanics notes", link: "notes.html" },
+        { name: "Islamic Studies / Ethics", description: "Islamic Studies notes", link: "notes.html" },
+        { name: "Communication Skills", description: "Communication notes", link: "notes.html" },
+        { name: "Soil Mechanics", description: "Soil Mechanics notes", link: "notes.html" },
+        { name: "Electrical System for Building", description: "Electrical notes", link: "notes.html" },
+        { name: "Computer Aided Design", description: "CAD notes", link: "notes.html" },
+        { name: "Functional English", description: "English notes", link: "notes.html" },
+        { name: "Computer Fundamentals", description: "Computer notes", link: "notes.html" },
+        { name: "Applied Calculus", description: "Calculus notes", link: "notes.html" },
+        { name: "History of Building Technology", description: "Building history notes", link: "notes.html" },
+        { name: "Occupational Health & Safety", description: "Safety notes", link: "notes.html" },
+        { name: "Fluid Mechanics", description: "Fluid notes", link: "notes.html" },
+        { name: "Construction Material", description: "Construction notes", link: "notes.html" },
+        { name: "Applied Physics", description: "Physics study notes", link: "notes.html" },
+        { name: "Engineering Drawing", description: "Drawing notes", link: "notes.html" }
+    ];
+
+    let found = materials.filter(function(item) {
+        let text = (item.name + " " + item.description).toLowerCase();
+        return text.includes(input);
+    });
+
+    if (found.length === 0) {
+        results.innerHTML = "<p>No results found.</p>";
+        return;
+    }
+
+    found.forEach(function(item) {
+        results.innerHTML += `
+            <div class="card">
+                <h3>${item.name}</h3>
+                <p>${item.description}</p>
+                <a href="${item.link}">Open</a>
+            </div>
+        `;
+    });
+}
+</script>
+
+</body>
+</html>
