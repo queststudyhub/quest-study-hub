@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Physics Notes | QUEST Study Hub</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <header>
+        <h1>QUEST Study Hub</h1>
+        <p>Applied Physics Notes</p>
+    </header>
+
+    <nav>
+        <a href="../index.html">Home</a>
+        <a href="../notes.html">All Subjects</a>
+        <a href="../past-papers.html">Past Papers</a>
+    </nav>
+
+    <section class="materials">
+        <h2>Applied Physics</h2>
+        <p class="subtitle">Lecture notes and study material</p>
+
+       
+<div class="cards">
+    <div class="card">
+        <h3>Lecture 1</h3>
+        <p>Applied Physics Notes</p>
+        <a href="#pdf-viewer" onclick="showPDF()">View PDF</a>
+    </div>
+</div>
+
+<div id="pdf-viewer" style="display:none; background:white; padding:20px; margin:25px auto; max-width:1000px; border-radius:10px;">
+    <h3>Applied Physics Lecture 1</h3>
+    <button onclick="closePDF()">Close PDF</button>
+    <iframe
+        src="http://127.0.0.1:5500/subject-notes/pdfs/applied-physics-lecture-1.pdf"
+        width="100%"
+        height="700px"
+        style="border:none;">
+    </iframe>
+</div>
+
+<script>
+function showPDF() {
+    document.getElementById("pdf-viewer").style.display = "block";
+}
+
+function closePDF() {
+    document.getElementById("pdf-viewer").style.display = "none";
+}
+</script>
+
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <h3>QUEST Study Hub</h3>
+        <p>Made by MUHAMMAD ARSLAN</p>
+        <p>© 2026 QUEST Study Hub. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
+  

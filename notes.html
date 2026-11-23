@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes | QUEST Study Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>QUEST Study Hub</h1>
+        <p>University Study Notes</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="past-papers.html">Past Papers</a>
+        <a href="notifications.html">Notifications</a>
+    </nav>
+
+    <section class="materials">
+        <h2>Subject-wise Notes</h2>
+        <p class="subtitle">Select your subject to find notes.</p>
+
+<div class="search-box">
+    <input type="text" id="subjectSearch"
+    placeholder="Search your subject...">
+
+    <button type="button" onclick="searchSubjects()">Search</button>
+</div>
+
+<p id="noResults"></p>
+        
+<div class="cards" id="subjectCards">
+    <div class="card">
+        <h3>📐 Linear Algebra</h3>
+        <p>Linear algebra study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>📊 Statistics & Probability</h3>
+        <p>Statistics and probability notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>🎨 Fine Arts</h3>
+        <p>Fine arts study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>⚙️ Engineering Mechanics</h3>
+        <p>Engineering mechanics notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>📖 Islamic Studies / Ethics</h3>
+        <p>Islamic studies and ethics notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>🗣️ Communication Skills</h3>
+        <p>Communication skills study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>🌍 Soil Mechanics</h3>
+        <p>Soil mechanics study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>⚡ Electrical System for Building</h3>
+        <p>Building electrical system notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>💻 Computer Aided Design</h3>
+        <p>CAD study notes and material.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>📗 Functional English</h3>
+        <p>English grammar and writing notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>🖥️ Computer Fundamentals</h3>
+        <p>Computer fundamentals study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>📙 Applied Calculus</h3>
+        <p>Calculus formulas and study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>🏛️ History of Building Technology</h3>
+        <p>History of building technology notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>🦺 Occupational Health & Safety</h3>
+        <p>Health and safety study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>💧 Fluid Mechanics</h3>
+        <p>Fluid mechanics study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>📘 Construction Material</h3>
+        <p>Construction materials study notes.</p>
+        <a href="#">View Notes</a>
+    </div>
+
+    <div class="card">
+        <h3>🔬 Applied Physics</h3>
+        <p>Physics lecture notes and study material.</p>
+       <a href="subject-notes/applied-physics.html">View Notes</a>
+    </div>
+<div class="card">
+    <h3>📏 Engineering Drawing</h3>
+    <p>Engineering drawing notes and concepts.</p>
+    <a href="#">View Notes</a>
+</div>
+
+</div>
+
+    </section>
+
+    <footer>
+        <h3>QUEST Study Hub</h3>
+        <p>Made by MUHAMMAD ARSLAN</p>
+        <p>© 2026 QUEST Study Hub. All Rights Reserved.</p>
+    </footer>
+
+
+
+<script>
+function searchSubjects() {
+
+    let input = document.getElementById("subjectSearch").value.toLowerCase().trim();
+
+    let cards = document.querySelectorAll("#subjectCards .card");
+    let found = 0;
+
+    cards.forEach(function(card) {
+
+        let heading = card.querySelector("h3");
+        let subject = heading.textContent.toLowerCase();
+
+        if (subject.includes(input)) {
+            card.style.display = "block";
+            found++;
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+    let message = document.getElementById("noResults");
+
+    if (found === 0) {
+        message.textContent = "No results found.";
+    } else {
+        message.textContent = found + " subject found.";
+    }
+}
+</script>
+
+
+</body>
+</html>
