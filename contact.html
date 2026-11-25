@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -31,13 +32,13 @@
 
             <form id="contact-form">
                 <input type="text" name="name" placeholder="Your Name" required>
-<br><br>
+                <br><br>
 
-<input type="email" name="email" placeholder="Your Email" required>
-<br><br>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <br><br>
 
-<textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-<br><br>
+                <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+                <br><br>
 
                 <button type="submit" class="btn">Send Message</button>
             </form>
@@ -48,31 +49,32 @@
         <p>© 2026 QUEST Study Hub</p>
     </footer>
 
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-<script>
-(function () {
-    emailjs.init({
-        publicKey: "npO-tDCfki9NsszGv",
-    });
-})();
+    <script>
+        (function () {
+            emailjs.init({
+                publicKey: "bwORMENkF-oxz2959",
+            });
+        })();
 
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault();
 
-    emailjs.sendForm(
-        "service_1nwb7k9",
-        "template_a59fw5i",
-        this
-    ).then(function() {
-        alert("Message sent successfully!");
-        document.getElementById("contact-form").reset();
-    }, function(error) {
-        alert("Message failed. Please try again.");
-        console.log(error);
-    });
-});
-</script>
+            emailjs.sendForm(
+                "service_wrlfq0z",
+                "template_hglulfm",
+                this
+            ).then(function() {
+                alert("Message sent successfully!");
+                document.getElementById("contact-form").reset();
+            }, function(error) {
+                alert("Message failed. Please try again.");
+                console.log(error);
+            });
+        });
+    </script>
 
 </body>
 </html>
+```
