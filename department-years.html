@@ -58,7 +58,7 @@
 <body>
 
     <h1>QUEST Study Hub</h1>
-    <h1>Past Papers</h1>
+    <h1 id="department-title">Past Papers</h1>
 
     <div class="container">
 
@@ -83,6 +83,14 @@
         </div>
 
     </div>
+<script>
+const params = new URLSearchParams(window.location.search);
+const department = params.get("department");
 
+if (department) {
+    document.getElementById("department-title").textContent =
+        department + " Past Papers";
+}
+</script>
 </body>
 </html>

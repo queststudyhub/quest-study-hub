@@ -4,66 +4,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Applied Physics Notes | QUEST Study Hub</title>
+    <title>Applied Physics | QUEST Study Hub</title>
     <link rel="stylesheet" href="../style.css">
+
+    <style>
+        .page-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin: 25px;
+        }
+
+        .page-buttons a,
+        .pdf-button {
+            background: #087F8C;
+            color: white;
+            padding: 11px 22px;
+            border-radius: 6px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .page-buttons a:hover,
+        .pdf-button:hover {
+            background: #066570;
+        }
+
+        #pdf-viewer {
+            display: none;
+            background: white;
+            padding: 20px;
+            margin: 25px auto;
+            max-width: 1000px;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+
 <body>
 
     <header>
         <h1>QUEST Study Hub</h1>
-        <p>Applied Physics Notes</p>
+        <p>Your Learning, Our Priority</p>
     </header>
 
     <nav>
         <a href="../index.html">Home</a>
-        <a href="../notes.html">All Subjects</a>
         <a href="../past-papers.html">Past Papers</a>
+        <a href="../notes.html">Notes</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
     </nav>
 
-    <section class="materials">
+    <section class="about">
         <h2>Applied Physics</h2>
-        <p class="subtitle">Lecture notes and study material</p>
+        <p>Lecture Notes and Study Materials</p>
+    </section>
 
-       
-<div class="cards">
-    <div class="card">
-        <h3>Lecture 1</h3>
-        <p>Applied Physics Notes</p>
-        <a href="#pdf-viewer" onclick="showPDF()">View PDF</a>
+    <div class="page-buttons">
+        <a href="../index.html">Home</a>
+        <a href="../notes.html">All Notes</a>
+        <a href="javascript:history.back()">Back</a>
     </div>
-</div>
 
-<div id="pdf-viewer" style="display:none; background:white; padding:20px; margin:25px auto; max-width:1000px; border-radius:10px;">
-    <h3>Applied Physics Lecture 1</h3>
-    <button onclick="closePDF()">Close PDF</button>
-    <iframe
-        src="http://127.0.0.1:5500/subject-notes/pdfs/applied-physics-lecture-1.pdf"
-        width="100%"
-        height="700px"
-        style="border:none;">
-    </iframe>
-</div>
-
-<script>
-function showPDF() {
-    document.getElementById("pdf-viewer").style.display = "block";
-}
-
-function closePDF() {
-    document.getElementById("pdf-viewer").style.display = "none";
-}
-</script>
-
-            </div>
+    <section class="materials">
+        <div class="card">
+            <h3>Lecture 1</h3>
+            <p>Applied Physics Notes</p>
+            <button class="pdf-button" onclick="showPDF()">View PDF</button>
         </div>
     </section>
 
+    <div id="pdf-viewer">
+        <h3>Applied Physics Lecture 1</h3>
+
+        <button class="pdf-button" onclick="closePDF()">Close PDF</button>
+
+        <iframe
+            src="pdfs/applied-physics-lecture-1.pdf"
+            width="100%"
+            height="700px"
+            style="border:none; margin-top:15px;">
+        </iframe>
+    </div>
+
+    <script>
+        function showPDF() {
+            document.getElementById("pdf-viewer").style.display = "block";
+        }
+
+        function closePDF() {
+            document.getElementById("pdf-viewer").style.display = "none";
+        }
+    </script>
+
     <footer>
-        <h3>QUEST Study Hub</h3>
         <p>Made by MUHAMMAD ARSLAN</p>
         <p>© 2026 QUEST Study Hub. All Rights Reserved.</p>
     </footer>
 
 </body>
 </html>
-  
