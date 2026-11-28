@@ -19,14 +19,28 @@ body {
 header {
     background: linear-gradient(135deg, #102A43, #087F8C);
     color: white;
-    text-align: center;
-    padding: 38px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 25px 15px;
 }
 
-header h1 {
-    font-size: 38px;
-    margin-bottom: 10px;
-    letter-spacing: 0.5px;
+header img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+}
+
+.header-text h1 {
+    font-size: 32px;
+    margin: 0 0 8px;
+}
+
+.header-text p {
+    font-size: 16px;
+    color: #e0eaf2;
+    margin: 0;
 }
 
 header p {
