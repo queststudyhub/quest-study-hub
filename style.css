@@ -298,43 +298,132 @@ form button {
 }
 
 /* Mobile Responsive */
+/* Mobile Responsive */
 @media (max-width: 600px) {
-    header h1 {
-        font-size: 30px;
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+        gap: 10px;
+        padding: 18px 12px;
+        flex-wrap: nowrap;
+    }
+
+    header img {
+        width: 85px;
+        height: 85px;
+        flex-shrink: 0;
+    }
+
+    .header-text h1 {
+        font-size: 23px;
+        line-height: 1.2;
+    }
+
+    .header-text p {
+        font-size: 13px;
+    }
+
+    /* Navigation */
+    nav {
+        padding: 10px 5px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5px;
     }
 
     nav a {
-        display: inline-block;
-        margin: 9px;
+        font-size: 13px;
+        margin: 5px;
+        padding: 5px;
     }
 
+    /* Hero */
     .hero {
-        padding: 65px 15px;
+        padding: 50px 15px;
+    }
+
+    .hero-tag {
+        font-size: 11px !important;
+        letter-spacing: 1px;
     }
 
     .hero h2 {
-        font-size: 29px;
+        font-size: 28px;
+        line-height: 1.3;
     }
 
     .hero p {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    /* Search */
+    .search-box {
+        width: 100%;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .search-box input,
+    .search-box button {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    /* Materials */
+    .materials {
+        padding: 45px 15px;
+    }
+
+    .materials h2 {
+        font-size: 26px;
     }
 
     .cards {
         flex-direction: column;
         align-items: center;
+        gap: 18px;
     }
 
     .card {
         width: 100%;
-        max-width: 350px;
+        max-width: 100%;
+        padding: 25px 18px;
     }
 
-    .search-box {
-        flex-direction: column;
+    /* Search Results */
+    #searchResults {
+        grid-template-columns: 1fr;
+        padding: 0 10px;
     }
 
-    .search-box button {
-        width: 100%;
+    /* About */
+    .about {
+        padding: 45px 15px;
+    }
+
+    .about h2 {
+        font-size: 25px;
+    }
+
+    /* Footer */
+    footer {
+        padding: 25px 12px;
+        font-size: 14px;
+    }
+
+    footer h3 {
+        font-size: 20px;
+    }
+
+    /* PDF Viewer */
+    iframe {
+        max-width: 100%;
+        height: 550px;
     }
 }
